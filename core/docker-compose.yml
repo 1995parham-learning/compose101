@@ -14,7 +14,7 @@ services:
        - ./.docker/compose/mariadb-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: BaseAPI
+      MYSQL_DATABASE: base-api
       MYSQL_USER: dev
       MYSQL_PASSWORD: secret
     ports:

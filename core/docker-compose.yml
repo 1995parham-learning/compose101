@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+  mariadb:
+    image: mariadb
+    restart: always
+    volumes:
+       - ./.docker/compose/mariadb-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: BaseAPI
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: secret
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      environment:
+          - PMA_ARBITRARY=1
+          - PMA_HOST=db
+      restart: always
+      ports:
+          - 8686:80
+      volumes:
+          - /sessions
+      links:
+          - mariadb
+

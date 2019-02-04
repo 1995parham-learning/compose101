@@ -1,3 +1,7 @@
-# dockers
+# Dockers
+## Introduction
+Useful docker-composes for developing in Golangify. It has following services:
 
-Useful docker-composes for developing in Golangify
+- Redis
+- MySQL
+- PHPMyAdmin

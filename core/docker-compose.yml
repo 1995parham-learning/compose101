@@ -7,6 +7,12 @@ services:
     ports:
       - 6379:6379
 
+  tile38:
+    image: tile38/tile38
+    restart: always
+    ports:
+      - 9851:9851
+
   mariadb:
     image: mariadb
     restart: always

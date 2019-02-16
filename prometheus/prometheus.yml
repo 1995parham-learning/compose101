@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: []
+    scheme: http
+    timeout: 10s
+
+scrape_configs:
+  - job_name: prometheus
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets:
+        - localhost:9090
+  - job_name: hosts
+    static_configs:
+      - targets:
+        - 172.17.0.1:9100 # main host
+  - job_name: services
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets:

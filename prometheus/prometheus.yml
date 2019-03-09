@@ -23,6 +23,14 @@ scrape_configs:
     static_configs:
       - targets:
         - 172.17.0.1:9100 # main host
+  - job_name: snapp_cloud
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets:
+        - public-surge.apps.public.teh-1.snappcloud.io
   - job_name: services
     scrape_interval: 15s
     scrape_timeout: 10s
@@ -31,3 +39,4 @@ scrape_configs:
     static_configs:
       - targets:
         - 172.17.0.1:9121
+        - 172.17.0.1:8585

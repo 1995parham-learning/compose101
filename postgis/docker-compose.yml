@@ -1,0 +1,21 @@
+---
+version: '3.9'
+
+services:
+  db:
+    image: postgis/postgis
+    shm_size: 1g
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: parham
+      POSTGRES_DB: main
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5080:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=parham.alvani@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=secret

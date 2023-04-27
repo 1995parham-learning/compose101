@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "compose local server",
+      "Comment": "the server is defined in the same compose file as pgadmin4",
+      "Group": "main",
+      "Port": 5432,
+      "Username": "parham",
+      "Host": "db",
+      "SSLMode": "prefer",
+      "MaintenanceDB": "postgres"
+    }
+  }
+}

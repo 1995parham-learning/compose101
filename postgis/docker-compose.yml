@@ -19,3 +19,5 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=parham.alvani@gmail.com
       - PGADMIN_DEFAULT_PASSWORD=secret
+    volumes:
+      - ./servers.json:/pgadmin4/servers.json

@@ -1,6 +1,4 @@
-<p align="center">
-<h1>Docker Compose 101</h1>
-</p>
+<h1 align="center">Docker Compose 101</h1>
 
 ## Introduction
 

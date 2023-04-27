@@ -1,4 +1,7 @@
 <h1 align="center">Docker Compose 101</h1>
+<p align="center">
+  <img alt="banner" src="./.github/img/banner.jpg" height=100>
+</p>
 
 ## Introduction
 

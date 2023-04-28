@@ -7,3 +7,5 @@
 
 There are some day to day tasks that you need to have database or another service at your hand to test it.
 In this repository I gather some of these services.
+
+Also, these composes can be useful as template to embed these services into your development docker compose.

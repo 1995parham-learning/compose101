@@ -1,0 +1,6 @@
+services:
+  database:
+    environment:
+      POSTGRES_USER: parham
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: love

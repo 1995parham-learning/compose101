@@ -1,0 +1,3 @@
+[submodule "core/kafka"]
+	path = core/kafka
+	url = git@github.com:wurstmeister/kafka-docker.git
